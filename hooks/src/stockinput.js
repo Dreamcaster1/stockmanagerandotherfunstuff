@@ -113,13 +113,13 @@ function Stockinput() {
  <button onClick={() => func4()}>Update the prices</button>
  <div>
   <p>{price === undefined ? "" : namest}</p>
-  <p>{price === undefined ? "" : "Current price:" + " " + price}</p>
+  <p>{price === undefined ? "" : "Current price: " + price}</p>
  </div>
  <div>
     
  {price === "Loading" || data.length === 0 || bool === false ? "" : <input onChange={(e) => func3(e)} type="number" min="0" max="10000"></input>}
  {Number.isInteger(totalamount) ? 
- (<p>{price === "Loading" || data.length === 0 || bool === false  ? " " : namest + " " + "shares that you have equal to" + " " + (curr === "EUR" ? totalamount.toFixed(1)*conversion: totalamount.toFixed(1)) + " " + curr}</p>)
+ (<p>{price === "Loading" || data.length === 0 || bool === false  ? " " : namest + " shares that you have equal to " + (curr === "EUR" ? totalamount.toFixed(1)*conversion: totalamount.toFixed(1)) + " " + curr}</p>)
   : <p>{totalamount}</p>}
  </div>
  {price === "Loading" || data.length === 0 || bool === false  ? "" :<Portfolio
