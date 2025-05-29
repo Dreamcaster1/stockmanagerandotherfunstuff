@@ -3,23 +3,23 @@ import "./button.css"
 function Changecurr({curr, changecurr, changetotalamount, conversion, conversion2, totalamount}) {
 let [Left,ChLef] = useState("5px")
     let [isclicked, changeisclicked] = useState(true)
-    let [border, changeborder] = useState("black")
-    let [background2, changebackground2] = useState("white")
-    let [theme, changetheme] = useState("Light")
-    let [background3, changebackground3] = useState("white")
+    let border = "black"
+    let background2 = "white"
+    let theme = "Light"
+    let background3 = "white"
     function func1() {
         console.log(curr)
-        if(isclicked == true) {
+        if(isclicked === true) {
             changecurr("EUR")
         }
-        if (isclicked == false) {
+        if (isclicked === false) {
             changecurr("USD")
         }
         changeisclicked(!isclicked)
-        if (isclicked == true) {
+        if (isclicked === true) {
             ChLef("60%")
         }
-        if (isclicked == false) {
+        if (isclicked === false) {
             ChLef("5%")
         }
     }
