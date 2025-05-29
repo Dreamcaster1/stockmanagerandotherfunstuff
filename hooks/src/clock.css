@@ -1,0 +1,25 @@
+#round {
+    position: relative;
+    width: 35vh;
+    height: 35vh;
+    border-radius: 100000000px;
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    background-color: white;
+}
+#dot {
+    position: absolute;
+    height: 1vh;
+    width: 1vh;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 100000000px;
+    right: 16.5vh;
+    bottom: 16.5vh;
+}
+#hrs {
+   
+}
+

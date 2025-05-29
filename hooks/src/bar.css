@@ -1,0 +1,11 @@
+#bar {
+    width: 200px;
+    height: 50px;
+    border-color: black;
+    border-style: solid;
+}
+#inside {
+    height: 100%;
+    border-style: none;
+    background-color: greenyellow;
+}
