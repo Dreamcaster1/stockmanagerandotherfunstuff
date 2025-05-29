@@ -30,7 +30,7 @@ function Stockinput() {
         load()
     },[])
     const Row = ({ index, style }) => (
-        <div onClick={(e) => func2(e)} id='list' style={{...style,  border:'1px solid black'}}>{descdata[index] != null ? descdata[index].description : ""}</div>
+        <div onClick={(e) => func2(e)} id='list' style={{...style,  border:'1px solid black'}}>{descdata[index] !== null ? descdata[index].description : ""}</div>
       );
     useEffect(() => {
         changedescdata(data.filter((e) => {

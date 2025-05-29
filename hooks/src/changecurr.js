@@ -26,7 +26,7 @@ let [Left,ChLef] = useState("5px")
     useEffect(() => {
         document.body.style.backgroundColor = background3 
         localStorage.setItem("themekey", theme)
-    }, [background2, theme])
+    }, [theme])
     return<>
       <div style={{
           position: "relative",
