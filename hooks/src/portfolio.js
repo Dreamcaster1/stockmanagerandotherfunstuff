@@ -49,7 +49,6 @@ function Portfolio({namest, totalamount, numberofstocks, bool2, fullportfolio, c
         changefullportfolio(fullportfolio.filter((item) => {
             return item.namestock !== e.target.parentElement.firstChild.innerText.slice(0, e.target.parentElement.firstChild.innerText.indexOf(" you"))
         }))
-        console.log(res)
     }
     return<>
     <button disabled={bool2} onClick={() => func1()}>Add to portfolio</button>
