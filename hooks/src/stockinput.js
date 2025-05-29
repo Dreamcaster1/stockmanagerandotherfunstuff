@@ -37,7 +37,7 @@ function Stockinput() {
             return  e.description.includes(ev)
          }))
          
-    }, [ev])
+    }, [ev, data])
     function func1(e) {
         changeev(e.target.value)
     }

@@ -13,7 +13,7 @@ function Portfolio({namest, totalamount, numberofstocks, bool2, fullportfolio, c
          changeconversiontousd(2 - data.conversion_rates.EUR)
         }
         load()
-    }, [])
+    }, [changeconversiontoeur, changeconversiontousd])
    function func1() {
     let obj = {
         namestock: namest,
@@ -66,7 +66,7 @@ function Portfolio({namest, totalamount, numberofstocks, bool2, fullportfolio, c
             changedsum(dsum + item.totalprice)
         } 
         })
-    },[fullportfolio])}
+    },[fullportfolio, dsum])}
     </ul>
     <Changecurr
     curr={curr}
