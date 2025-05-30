@@ -55,18 +55,20 @@ function Portfolio({namest, totalamount, numberofstocks, bool2, fullportfolio, c
     <ul id='ul'>
     {fullportfolio.map((item) => {
         return<>{item.totalprice === "You are not that rich" || item.totalprice === "You cannot have negative stocks" ? "" : <div> 
-         <li id='li'>{item.namestock + " you own " + (item.numofstocks < 0 ? item.numofstocks = 0 : item.numofstocks) + " shares which equals to " + (curr === "EUR" ? (item.totalprice === "You are not that rich" || "You cannot have negative stocks" ? 0 : item.totalprice )  * conversion : ((item.totalprice === "You are not that rich" || "You cannot have negative stocks") ? item.totalprice : item.totalprice = 0 )) + " " + curr}</li>
+         <li id='li'>{item.namestock + " you own " + (item.numofstocks < 0 ? item.numofstocks = 0 : item.numofstocks) + " shares that equal to " + (curr == "EUR" ? (item.totalprice == "You are not that rich" || "You cannot have negative stocks" ? item.totalprice : 0 )  * conversion : ((item.totalprice == "You are not that rich" || "You cannot have negative stocks") ? item.totalprice : item.totalprice = 0 )) + " " + curr}</li>
         <button ref={ref} onClick={(e) => func2(e)}>Delete</button>
         </div>}</>
     })}
-    <p>{"Your portfolio equals to " + dsum}</p>
     {useEffect(() => {
+        let sum = 0;
         fullportfolio.forEach((item) => {
         if (Number.isInteger(item.totalprice)) {
-            changedsum(dsum + item.totalprice)
-        } 
-        })
+            sum += item.totalprice;
+         }
+     });
+     changedsum(sum); 
     },[fullportfolio])}
+    <p>{"Your portfolio equals to " + (curr == "EUR" ? dsum * conversion : dsum) + " " + curr}</p>
     </ul>
     <Changecurr
     curr={curr}
