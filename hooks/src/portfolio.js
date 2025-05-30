@@ -66,7 +66,7 @@ function Portfolio({namest, totalamount, numberofstocks, bool2, fullportfolio, c
             changedsum(dsum + item.totalprice)
         } 
         })
-    },[fullportfolio, dsum])}
+    },[fullportfolio])}
     </ul>
     <Changecurr
     curr={curr}
