@@ -33,11 +33,12 @@ function Stockinput() {
         <div onClick={(e) => func2(e)} id='list' style={{...style,  border:'1px solid black'}}>{descdata[index] !== null ? descdata[index].description : ""}</div>
       );
     useEffect(() => {
-        changedescdata(data.filter((e) => {
-            return  e.description.includes(ev)
-         }))
-         
-    }, [ev, data])
+  if (ev !== "") {
+    changedescdata(data.filter((e) => e.description.includes(ev)));
+  } else {
+    changedescdata(data);
+  }
+}, [ev, data]);
     function func1(e) {
         changeev(e.target.value)
     }
@@ -102,7 +103,7 @@ function Stockinput() {
   <div className="list-container">
     <List
       height={250}
-      itemCount={2900}
+      itemCount={descdata.length}
       itemSize={40}
       width={400}
     >
