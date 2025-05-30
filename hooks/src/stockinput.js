@@ -33,7 +33,7 @@ function Stockinput() {
         <div onClick={(e) => func2(e)} id='list' style={{...style,  border:'1px solid black'}}>{descdata[index] !== null ? descdata[index].description : ""}</div>
       );
     useEffect(() => {
-  if (ev !== "") {
+  if (ev && ev.trim() !== "") {
     changedescdata(data.filter((e) => e.description.includes(ev)));
   } else {
     changedescdata(data);
